@@ -142,9 +142,8 @@ class _PriceScreenState extends State<PriceScreen> {
                                             borderRadius:
                                                 BorderRadius.circular(8)),
                                         child: Text(
-                                          coinData[index]
-                                              .priceChange1D
-                                              .toString(),
+                                          '${coinData[index]
+                                              .priceChange1D}%',
                                           textAlign: TextAlign.center,
                                         ),
                                       ),
