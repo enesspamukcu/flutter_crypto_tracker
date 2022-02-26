@@ -202,13 +202,20 @@ class CoinDetail extends StatelessWidget {
                           children: [
                             LinkButton(
                               text: 'Website',
-                              onPress: () {
-                                launch(coin[index].websiteUrl);
-                              },
-                            ),
+                              onPress: () => coin[index].websiteUrl == null ?
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content:
+                                            Text('Website Not Found'))) :
+                                 launch(coin[index].websiteUrl)),
                             LinkButton(
                                 text: 'Twitter',
-                                onPress: () => launch(coin[index].twitterUrl)),
+                                onPress: () => coin[index].twitterUrl == null ?
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content:
+                                            Text('Twitter Url Not Found'))):
+                                 launch(coin[index].twitterUrl )),
                           ],
                         ),
                         Row(
