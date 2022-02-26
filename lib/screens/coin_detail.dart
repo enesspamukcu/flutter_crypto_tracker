@@ -1,6 +1,5 @@
 import 'package:crypto_tracker_flutter/constants.dart';
 import 'package:crypto_tracker_flutter/helper/methods.dart';
-import 'package:crypto_tracker_flutter/screens/price_screen.dart';
 import 'package:crypto_tracker_flutter/widgets/link_button.dart';
 import 'package:crypto_tracker_flutter/widgets/rich_text.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +12,6 @@ import 'package:url_launcher/url_launcher.dart';
 class CoinDetail extends StatelessWidget {
   CoinDetail({required this.coin, required this.index});
   List<CoinModell> coin;
-  PriceScreen priceScreen = PriceScreen();
   int index;
   Methods methods = Methods();
 
